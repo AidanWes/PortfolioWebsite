@@ -8,10 +8,8 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
-window.addEventListener("orientationchange", function(){
-    let orientation = window.orientation;
-    let new_orientation = (orientation) ? 0 : 180 + orientation ;
-    document.body.style.webkitTransform = "rotate(" + new_orientation + "deg)";
+window.addEventListener("load", ()=>{
+    welcome();
 });
 
 function typeText() {
