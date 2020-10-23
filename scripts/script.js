@@ -8,12 +8,10 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
-$(window).bind("orientationchange", function(){
+window.bind("orientationchange", function(){
     let orientation = window.orientation;
     let new_orientation = (orientation) ? 180 + orientation : 0;
-    $('body').css({
-        "-webkit-transform": "rotate(" + new_orientation + "deg)"
-    });
+    document.body.style.webkitTransform = "rotate(" + new_orientation + "deg)";
 });
 
 function typeText() {
@@ -60,7 +58,6 @@ function select(index) {
     });
 }
 
-welcome();
 function welcome() {
     //Replays the animation if the user refreshes the page
     let elm = document.getElementById('home');
