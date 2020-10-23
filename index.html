@@ -2,38 +2,200 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="icon" href="webfavicon.png">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="homeStyle.css">
+    <title>Aidan Wesloskie</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/info.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/welcomeStyle.css">
+    <link rel="stylesheet" href="styles/codeScreenStyle.css">
+    <link rel="stylesheet" href="styles/aboutStyle.css">
 </head>
-
 <body>
-<div class="web-container">
-    
-    <div class="nav-bar">
-    
-        <div class="nav-con">
-            <ul class="bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="myWorks.html">My Work</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
+    <div class="intro-container" id="title">
+        <div class="intro">
+            <span id="intro"></span>
+            <span id="cursor">_</span>
+        </div>
+        <div class="learn">
+            <p>Learn more about what I do</p><br>
+            <p><a class="arrow" id="arrow" href="#home" onclick="welcome();">V</a></p>
         </div>
     </div>
     
-    <div class="web-content">
-        <div class="name-box">
-                <div class="name">Aidan Wesloskie</div>
-            <hr style="margin-bottom: 7%; color: black;">
-                <div class="extra">
-                    Bloomsburg University Student <br>
-                    Computer Science Major <br>
-                    Class of 22'
+    <div class="main-container">
+        <nav class="sidebar" id="nav">
+            <div>
+                <p><a href="#home" class="icon" onclick="welcome(); select(0)">
+                    <i class="fas fa-home option" onclick="select(0)"></i>
+                    <br>Home</a>
+                </p>
+                <p><a href="#code" class="icon" onclick="select(1)">
+                    <i class="fa fa-code option" onclick="select(1)"></i>
+                    <br>Code</a>
+                </p>
+                <p><a href="#about" class="icon" onclick="select(2)">
+                    <i class="far fa-user option" onclick="select(2)"></i>
+                    <br>About</a>
+                </p>
+                <p><a href="#contact" class="icon" onclick="select(3)">
+                    <i class="far fa-envelope option" onclick="select(3)"></i>
+                    <br>Contact</a>
+                </p>
+            </div>
+            
+            <div class="social">
+                <p><a href="https://github.com/AidanWes" target="_blank" class="icon">
+                    <i class="fab fa-github"></i>
+                    <br>Github
+                </a></p>
+                <p><a href="https://www.linkedin.com/in/aidan-wesloskie-a46b55171/" target="_blank" class="icon">
+                    <i class="fab fa-linkedin"></i>
+                    <br>LinkedIn
+                </a></p>
+            </div>
+            
+        </nav>
+        
+        <div class="home-container container" id="home">
+            <div class="welcome" id="welcome-box">
+                <svg id="welcome" class="fade" viewBox="0 0 556 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d)">
+                            <path id="W" class="fill" d="M113.504 4.08556L90.5877 88.1557H79.0164L60.6383 20.4895L41.5796 88.1557L30.1217 88.2763L8 4.08556H19.0041L36.2477 75.3703L55.3064 4.08556H66.8778L85.0289 75.129L102.386 4.08556H113.504Z" stroke="white" stroke-width="5"/>
+                            <path id="E" class="fill" d="M135.125 13.0112V41.115H163.939V50.1613H135.125V79.1094H167.343V88.1557H124.801V3.96494H167.343V13.0112H135.125Z" stroke="white" stroke-width="5"/>
+                            <path id="L" class="fill" d="M193.287 79.23H220.968V88.1557H182.964V4.08556H193.287V79.23Z" stroke="white" stroke-width="5"/>
+                            <path id="C" class="fill" d="M228.074 46.0603C228.074 37.8583 229.813 30.5007 233.292 23.9874C236.771 17.3936 241.498 12.2473 247.473 8.54839C253.523 4.84946 260.216 3 267.553 3C276.174 3 283.7 5.21131 290.128 9.63394C296.557 14.0566 301.246 20.3287 304.195 28.4502H291.83C289.636 23.3843 286.46 19.4843 282.3 16.7504C278.216 14.0164 273.3 12.6494 267.553 12.6494C262.032 12.6494 257.078 14.0164 252.691 16.7504C248.305 19.4843 244.864 23.3843 242.368 28.4502C239.872 33.4357 238.624 39.3057 238.624 46.0603C238.624 52.7345 239.872 58.6045 242.368 63.6704C244.864 68.6559 248.305 72.5157 252.691 75.2496C257.078 77.9836 262.032 79.3506 267.553 79.3506C273.3 79.3506 278.216 78.0238 282.3 75.3703C286.46 72.6363 289.636 68.7363 291.83 63.6704H304.195C301.246 71.7116 296.557 77.9434 290.128 82.3661C283.7 86.7083 276.174 88.8794 267.553 88.8794C260.216 88.8794 253.523 87.0701 247.473 83.4516C241.498 79.7527 236.771 74.6466 233.292 68.1332C229.813 61.6199 228.074 54.2623 228.074 46.0603Z" stroke="white" stroke-width="5"/>
+                            <path id="O" class="fill" d="M355.411 89C348.075 89 341.382 87.1907 335.331 83.5722C329.281 79.8733 324.478 74.7672 320.924 68.2539C317.445 61.6601 315.705 54.2623 315.705 46.0603C315.705 37.8583 317.445 30.5007 320.924 23.9874C324.478 17.3936 329.281 12.2875 335.331 8.66901C341.382 4.97008 348.075 3.12062 355.411 3.12062C362.823 3.12062 369.554 4.97008 375.604 8.66901C381.655 12.2875 386.419 17.3534 389.898 23.8668C393.377 30.3801 395.117 37.7779 395.117 46.0603C395.117 54.3427 393.377 61.7405 389.898 68.2539C386.419 74.7672 381.655 79.8733 375.604 83.5722C369.554 87.1907 362.823 89 355.411 89ZM355.411 79.4713C360.932 79.4713 365.886 78.1042 370.272 75.3703C374.734 72.6363 378.213 68.7363 380.709 63.6704C383.281 58.6045 384.566 52.7345 384.566 46.0603C384.566 39.3057 383.281 33.4357 380.709 28.4502C378.213 23.3843 374.772 19.4843 370.386 16.7504C365.999 14.0164 361.008 12.6494 355.411 12.6494C349.814 12.6494 344.823 14.0164 340.436 16.7504C336.05 19.4843 332.571 23.3843 329.999 28.4502C327.504 33.4357 326.256 39.3057 326.256 46.0603C326.256 52.7345 327.504 58.6045 329.999 63.6704C332.571 68.7363 336.05 72.6363 340.436 75.3703C344.899 78.1042 349.89 79.4713 355.411 79.4713Z" stroke="white" stroke-width="5"/>
+                            <path id="M" class="fill" d="M488.951 4.68864V88.1557H478.627V25.9173L452.535 88.1557H445.274L419.069 25.7966V88.1557H408.745V4.68864H419.863L448.905 73.6816L477.946 4.68864H488.951Z" stroke="white" stroke-width="5"/>
+                            <path id="E" class="fill" d="M516.782 13.0112V41.115H545.597V50.1613H516.782V79.1094H549V88.1557H506.458V3.96494H549V13.0112H516.782Z" stroke="white" stroke-width="5"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d" x="0.75824" y="0.5" width="554.742" height="99" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                        </defs>
+                    </svg>
+                <span class="fade caption">Feel free to look around, or contact me below</span>
+                <span><a class="fade contact-button" href="#contact">Contact Me</a></span>
+            </div>
+        </div>
+    
+        <div class="code-container container" id="code">
+            <h1 class="project-header">Some of my Projects:</h1>
+            <div class="display-case" id="slide">
+                
+                <div class="arrows">
+                    <div class="left arrow-slide" id="left"><span><</span></div>
+                    <div class="right arrow-slide" id="right"><span>></span></div>
                 </div>
+                
+                <div class="display-card" id="card">
+                    <p class="card-caption">
+                        <a id="slide-link" target="_blank" href="https://codepen.io/AidanWes/full/oNxKpoN">Password Generator</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="skills">
+                <h2>My skills:</h2>
+                <hr>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="skill-heading">
+                            Interpreted Languages:
+                        </td>
+                        <td class="skill-list">
+                            <span>JavaScript (ES6+)</span>
+                            <span>Python</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skill-heading">
+                            Compiled Languages:
+                        </td>
+                        <td class="skill-list">
+                            <span>Java</span>
+                            <span>C++</span>
+                            <span>C</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skill-heading">
+                            Cloud & Data:
+                        </td>
+                        <td class="skill-list">
+                            <span>SQL</span>
+                            <span>XML</span>
+                            <span>PHP</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skill-heading">
+                            Other:
+                        </td>
+                        <td class="skill-list">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Android Development</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
     
-</div>
+        <div class="about-container container" id="about">
+            <div class="about-me">
+                <h1 class="about-header">About Me:</h1>
+                <p>&nbsp;</p>
+                <p class="about-text">
+                    I'm a Junior Computer Science student from Bloomsburg University
+                    who has a real passion for Software Development and Web Development.
+                    <p>&nbsp;</p>
+                    Well-organised person, problem solver with high attention to detail.
+                    I enjoy outdoor activities, programming, and movies.
+                    <p>&nbsp;</p>
+                    I prefer working with languages such as Java and JavaScript.
+                </p>
+            </div>
+        </div>
+    
+        <div class="contact-container container" id="contact">
+                <div class="email">
+                    
+                    <h1 class="contact-header">Contact Me</h1>
+                    <p>&nbsp;</p>
+    
+                    <p class="contact-info">
+                        I'm very interesting in furthering my web developing career. I
+                        also have an interest in other frameworks such as React and Angular.
+                        If you have any questions feel free to ask them below.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+    
+                    <form action="mailto:aidanwes@gmail.com" method="post" enctype="text/plain">
+                        <div class="personal">
+                            <input  type="text" id="sender-name" class="sender-name" placeholder="Name">
+                            <input type="email" id="sender-email" class="sender-email" placeholder="Email">
+                        </div>
+                        <input name="subject" type="text" id="subject" class="subject email-field personal" placeholder="Subject">
+                        <textarea name="email" id="message" cols="40" rows="10" class="message email-field" placeholder="Message"></textarea>
+    
+                        <button class="contact-button send">Send</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+    <script src="scripts/slideshow.js"></script>
+    <script src="https://kit.fontawesome.com/58355b8319.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

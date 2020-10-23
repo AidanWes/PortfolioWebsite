@@ -1,0 +1,96 @@
+.main-container{
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+.container{
+    scroll-snap-align: center;
+    min-height: 100vh;
+    margin-left: 4rem;
+    background-color: #202431;
+    border-top: 2px solid black;
+}
+
+/*Contact*/
+.contact-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: url("../BackgroundPics/emailBack.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.email{
+    background: #14151d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 100vh;
+    font-size: 1vmax;
+    padding: 0 3.5rem;
+}
+
+.contact-header{
+    text-align: center;
+    margin: 2vh 0;
+    color: #08fdd8;
+}
+
+.contact-info{
+    padding: 1rem 0;
+    color: white;
+}
+
+.personal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.personal input{
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #20222f;
+    color: white;
+    width: 49%;
+    height: 6vh;
+    border-radius: 10px;
+}
+
+.subject{
+    background-color: #20222f;
+    font-size: 2vmin;
+    width: 100%;
+    height: 6vh;
+    margin-top: 0.6rem;
+}
+
+.message{
+    background-color: #20222f;
+    font-size: 2vw;
+    resize: none;
+    width: 100%;
+    height: 20vh;
+    margin: 0.6rem 0;
+    font-family: inherit;
+}
+
+.email-field{
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.send{
+    font-size: 2vmin;
+    margin-top: 2.2vh;
+    float: right;
+    font-family: inherit;
+}

@@ -1,0 +1,24 @@
+.about-header{
+    margin: 2vh 0;
+    font-size: 4vmax;
+    color: #08fdd8;
+}
+
+.about-container{
+    display: flex;
+    justify-content: start;
+    background: url("../BackgroundPics/aboutBack.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.about-me{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    min-width: 500px;
+    height: 90vh;
+    font-size: 1.5vmax;
+    padding: 0 3.5rem;
+    color: white;
+}

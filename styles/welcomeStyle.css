@@ -1,0 +1,105 @@
+/*Home*/
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("../BackgroundPics/welcomeBack.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10vh;
+    color: white;
+    font-size: 2em;
+    margin: 4rem 0;
+}
+
+.welcome span{
+    margin-left: 2vh;
+    display: flex;
+    width: 100%;
+}
+
+.caption{
+    padding: 1rem 2rem 4rem 0;
+}
+
+.contact-button:hover{
+    background-color: #08fdd8;
+    color: #202431;
+    border-radius: 10px;
+}
+
+#welcome{
+    width: 40vmax;
+    margin-right: 25rem;
+    margin-top: 5vh;
+}
+
+#W{
+    stroke-dasharray: 682;
+    stroke-dashoffset: 682;
+}
+#E{
+    stroke-dasharray: 385;
+    stroke-dashoffset: 385;
+}
+#L{
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+}
+#C{
+    stroke-dasharray: 415;
+    stroke-dashoffset: 415;
+}
+#O{
+    stroke-dasharray: 285;
+    stroke-dashoffset: 285;
+}
+#M{
+    stroke-dasharray: 662;
+    stroke-dashoffset: 662;
+}
+#E{
+    stroke-dasharray: 385;
+    stroke-dashoffset: 385;
+}
+
+.contact-button{
+    border: 2px solid #08fdd8;
+    color: #08fdd8;
+    padding: 0.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: 1s;
+    background: transparent;
+}
+
+@keyframes line-anim {
+    from{
+        fill: transparent;
+    }
+    to{
+        stroke-dashoffset: 0;
+        fill: #b8b8b8;
+        margin-top: 0;
+    }
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+        letter-spacing: 0;
+    }
+}
