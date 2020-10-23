@@ -8,7 +8,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
-window.bind("orientationchange", function(){
+window.addEventListener("orientationchange", function(){
     let orientation = window.orientation;
     let new_orientation = (orientation) ? 180 + orientation : 0;
     document.body.style.webkitTransform = "rotate(" + new_orientation + "deg)";
