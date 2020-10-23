@@ -4,9 +4,9 @@ let idx = 0;
 let typing = setInterval(typeText, 100);
 
 //On refresh puts the user back at the top of the chain
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 
 function typeText() {
     //Auto types the text in the intro screen
