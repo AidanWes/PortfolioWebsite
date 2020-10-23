@@ -8,6 +8,14 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
+$(window).bind("orientationchange", function(){
+    let orientation = window.orientation;
+    let new_orientation = (orientation) ? 180 + orientation : 0;
+    $('body').css({
+        "-webkit-transform": "rotate(" + new_orientation + "deg)"
+    });
+});
+
 function typeText() {
     //Auto types the text in the intro screen
     type.innerText = msg.slice(0, idx);
